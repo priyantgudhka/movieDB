@@ -13,6 +13,8 @@ import { useFetchMovieCredits } from "../hooks/useFetchMovieCredits"
 import { useFetchMovieRecommendations } from "../hooks/useFetchMovieRecommendations"
 import Castcard from "../components/CastCard"
 import GenreChip from "../components/GenreChip"
+import AppBar from '../components/Appbar';
+
 
 function MovieDetails() {
   const movieId = useParams().id
@@ -33,6 +35,7 @@ function MovieDetails() {
 
   return (
     <div>
+      <AppBar />
       <PosterCard style={{ backgroundImage: `url(${backDropImageUrl})` }}>
         <PosterCardBody>
           <PosterImage src={imageUrl} alt={movieDetails.title} />

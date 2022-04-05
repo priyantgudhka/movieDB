@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -41,14 +42,18 @@ export default function HideAppBar(props) {
             <HideOnScroll {...props}>
                 <AppBar >
                     <Toolbar>
+
                         <Typography
                             variant="h6"
                             noWrap
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                         >
-                            My Movie DB Project
+                            <Link to={`/`} style={{ textDecoration: "none", color:"white" }}>
+                                My Movie DB Project
+                            </Link >
                         </Typography>
+
                         <Search />
                     </Toolbar>
                 </AppBar>
