@@ -12,6 +12,7 @@ const IMG_API = "https://image.tmdb.org/t/p/w1280"
 function MovieCard({ id, title, poster_path, vote_average, release_date, vote_count }) {
     return (
         <Link to={`/movie/${id}`} style={{ textDecoration: "none" }}>
+
             <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} >
                 <CardActionArea >
                     <CardMedia

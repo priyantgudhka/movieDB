@@ -12,7 +12,7 @@ function useFetchMovies(pageNumber) {
     useEffect(() => {
         setIsLoading(true)
 
-        const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&page=${pageNumber}`
+        const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&region=IN&with_original_language=hi&sort_by=popularity.desc&page=${pageNumber}`
 
         // const POPULAR_MOVIES_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${pageNumber}`
 
