@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -11,7 +9,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import Loader from "../components/Loader"
 import MovieCard from "../components/MovieCard";
-import Search from "../components/Search";
+import AppBar from '../components/Appbar';
 import useFetchMovies from "../hooks/useFetchMovies"
 
 export default function Movies() {
@@ -37,11 +35,7 @@ export default function Movies() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <Search {...Movies} />
-        </Toolbar>
-      </AppBar>
+      <AppBar />
       <main>
         {errorMessage && <div className="error">{errorMessage}</div>}
         <InfiniteScroll
